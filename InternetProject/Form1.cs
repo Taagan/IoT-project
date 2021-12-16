@@ -163,16 +163,16 @@ namespace InternetProject
         private void brightSlider_Scroll(object sender, EventArgs e)
         {
             string change = "";
-            for(int i = 0; i < 11; i++)
+            for(int i = 0; i < 10; i++)
             {
                 if(brightSlider.Value == i)
                 {
                     //lägg ändra brighnes arduino kod här
-                    change = (i * 10) + "";
-                    tbxBrightness.Text = change + "%";
+                    change = i+ "";
+                    tbxBrightness.Text = (i * 10) + 10 + "%";
                 }
             }
-            Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
         }
 
         private void checkboxONOFF_CheckedChanged(object sender, EventArgs e)
@@ -181,13 +181,13 @@ namespace InternetProject
             if(checkboxONOFF.Checked == true)
             {
                 //light på och av här
-                change = "light on";
+                change = "o";
             }
             else
             {
-                change = "light off";
+                change = "f";
             }
-            Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
         }
 
         private void tbxBrightness_TextChanged(object sender, EventArgs e)

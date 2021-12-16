@@ -97,7 +97,7 @@
             this.tbxBrightness.ReadOnly = true;
             this.tbxBrightness.Size = new System.Drawing.Size(132, 22);
             this.tbxBrightness.TabIndex = 4;
-            this.tbxBrightness.Text = "0%";
+            this.tbxBrightness.Text = "10%";
             this.tbxBrightness.TextChanged += new System.EventHandler(this.tbxBrightness_TextChanged);
             // 
             // checkedListBox1
@@ -200,6 +200,7 @@
             // 
             this.brightSlider.AutoSize = false;
             this.brightSlider.Location = new System.Drawing.Point(720, 194);
+            this.brightSlider.Maximum = 9;
             this.brightSlider.Name = "brightSlider";
             this.brightSlider.Size = new System.Drawing.Size(213, 56);
             this.brightSlider.TabIndex = 15;
@@ -211,7 +212,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 23);
             this.label1.TabIndex = 16;
-            this.label1.Text = "0                   50                 100";
+            this.label1.Text = "10                    50               100";
             // 
             // grpBri
             // 
