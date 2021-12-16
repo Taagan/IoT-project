@@ -161,7 +161,31 @@ namespace InternetProject
 
         private void brightSlider_Scroll(object sender, EventArgs e)
         {
+            string change = "";
+            for(int i = 0; i < 11; i++)
+            {
+                if(brightSlider.Value == i)
+                {
+                    //lägg ändra brighnes arduino kod här
+                    change = (i * 10) + "";
+                }
+            }
+            Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
+        }
 
+        private void checkboxONOFF_CheckedChanged(object sender, EventArgs e)
+        {
+            string change = "";
+            if(checkboxONOFF.Checked == true)
+            {
+                //light på och av här
+                change = "light on";
+            }
+            else
+            {
+                change = "light off";
+            }
+            Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
         }
     }
 }

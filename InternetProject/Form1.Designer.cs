@@ -54,17 +54,18 @@
             // 
             this.checkboxONOFF.AutoSize = true;
             this.checkboxONOFF.Location = new System.Drawing.Point(845, 80);
-            this.checkboxONOFF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkboxONOFF.Margin = new System.Windows.Forms.Padding(4);
             this.checkboxONOFF.Name = "checkboxONOFF";
             this.checkboxONOFF.Size = new System.Drawing.Size(82, 21);
             this.checkboxONOFF.TabIndex = 0;
             this.checkboxONOFF.Text = "ON/OFF";
             this.checkboxONOFF.UseVisualStyleBackColor = true;
+            this.checkboxONOFF.CheckedChanged += new System.EventHandler(this.checkboxONOFF_CheckedChanged);
             // 
             // tbxRed
             // 
             this.tbxRed.Location = new System.Drawing.Point(59, 194);
-            this.tbxRed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxRed.Margin = new System.Windows.Forms.Padding(4);
             this.tbxRed.Name = "tbxRed";
             this.tbxRed.Size = new System.Drawing.Size(132, 22);
             this.tbxRed.TabIndex = 1;
@@ -73,7 +74,7 @@
             // tbxGreen
             // 
             this.tbxGreen.Location = new System.Drawing.Point(253, 194);
-            this.tbxGreen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxGreen.Margin = new System.Windows.Forms.Padding(4);
             this.tbxGreen.Name = "tbxGreen";
             this.tbxGreen.Size = new System.Drawing.Size(132, 22);
             this.tbxGreen.TabIndex = 2;
@@ -82,7 +83,7 @@
             // tbxBlue
             // 
             this.tbxBlue.Location = new System.Drawing.Point(443, 194);
-            this.tbxBlue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxBlue.Margin = new System.Windows.Forms.Padding(4);
             this.tbxBlue.Name = "tbxBlue";
             this.tbxBlue.Size = new System.Drawing.Size(132, 22);
             this.tbxBlue.TabIndex = 3;
@@ -91,7 +92,7 @@
             // tbxBrightness
             // 
             this.tbxBrightness.Location = new System.Drawing.Point(107, 37);
-            this.tbxBrightness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxBrightness.Margin = new System.Windows.Forms.Padding(4);
             this.tbxBrightness.Name = "tbxBrightness";
             this.tbxBrightness.Size = new System.Drawing.Size(132, 22);
             this.tbxBrightness.TabIndex = 4;
@@ -105,7 +106,7 @@
             "Rave",
             "Rainbow"});
             this.checkedListBox1.Location = new System.Drawing.Point(32, 423);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(159, 106);
             this.checkedListBox1.TabIndex = 5;
@@ -114,7 +115,7 @@
             // 
             this.checkboxSensor.AutoSize = true;
             this.checkboxSensor.Location = new System.Drawing.Point(801, 334);
-            this.checkboxSensor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkboxSensor.Margin = new System.Windows.Forms.Padding(4);
             this.checkboxSensor.Name = "checkboxSensor";
             this.checkboxSensor.Size = new System.Drawing.Size(110, 21);
             this.checkboxSensor.TabIndex = 7;
@@ -124,7 +125,7 @@
             // tbxSensorDistance
             // 
             this.tbxSensorDistance.Location = new System.Drawing.Point(801, 380);
-            this.tbxSensorDistance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxSensorDistance.Margin = new System.Windows.Forms.Padding(4);
             this.tbxSensorDistance.Name = "tbxSensorDistance";
             this.tbxSensorDistance.Size = new System.Drawing.Size(132, 22);
             this.tbxSensorDistance.TabIndex = 8;
@@ -134,7 +135,7 @@
             // 
             this.rbtnAway.AutoSize = true;
             this.rbtnAway.Location = new System.Drawing.Point(803, 423);
-            this.rbtnAway.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnAway.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnAway.Name = "rbtnAway";
             this.rbtnAway.Size = new System.Drawing.Size(62, 21);
             this.rbtnAway.TabIndex = 9;
@@ -146,7 +147,7 @@
             // 
             this.rbtnWithin.AutoSize = true;
             this.rbtnWithin.Location = new System.Drawing.Point(803, 469);
-            this.rbtnWithin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbtnWithin.Margin = new System.Windows.Forms.Padding(4);
             this.rbtnWithin.Name = "rbtnWithin";
             this.rbtnWithin.Size = new System.Drawing.Size(68, 21);
             this.rbtnWithin.TabIndex = 10;
@@ -157,7 +158,7 @@
             // richtbx
             // 
             this.richtbx.Location = new System.Drawing.Point(364, 372);
-            this.richtbx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richtbx.Margin = new System.Windows.Forms.Padding(4);
             this.richtbx.Name = "richtbx";
             this.richtbx.Size = new System.Drawing.Size(132, 117);
             this.richtbx.TabIndex = 11;
@@ -166,7 +167,7 @@
             // btnRecieveMessage
             // 
             this.btnRecieveMessage.Location = new System.Drawing.Point(379, 336);
-            this.btnRecieveMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRecieveMessage.Margin = new System.Windows.Forms.Padding(4);
             this.btnRecieveMessage.Name = "btnRecieveMessage";
             this.btnRecieveMessage.Size = new System.Drawing.Size(100, 28);
             this.btnRecieveMessage.TabIndex = 12;
@@ -177,7 +178,7 @@
             // tbxPublish
             // 
             this.tbxPublish.Location = new System.Drawing.Point(59, 330);
-            this.tbxPublish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxPublish.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPublish.Name = "tbxPublish";
             this.tbxPublish.Size = new System.Drawing.Size(132, 22);
             this.tbxPublish.TabIndex = 13;
@@ -185,7 +186,7 @@
             // btnPublish
             // 
             this.btnPublish.Location = new System.Drawing.Point(75, 294);
-            this.btnPublish.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPublish.Margin = new System.Windows.Forms.Padding(4);
             this.btnPublish.Name = "btnPublish";
             this.btnPublish.Size = new System.Drawing.Size(100, 28);
             this.btnPublish.TabIndex = 14;
@@ -251,7 +252,7 @@
             this.Controls.Add(this.checkboxONOFF);
             this.Controls.Add(this.grpBri);
             this.Controls.Add(this.grpColor);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.brightSlider)).EndInit();
