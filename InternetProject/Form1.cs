@@ -151,5 +151,10 @@ namespace InternetProject
             Task Pub = PublishAsync("Grupp4OUT", tbxPublish.Text, true, 1);
             //RecieveHandler();
         }
+
+        private void brightSlider_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }
