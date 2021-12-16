@@ -44,6 +44,7 @@ namespace InternetProject
                 Console.WriteLine("Disconnected from MQTT Brokers.");
             });
 
+            //should change this to seperate than pub
             Task sub = SubscribeAsync("Grupp4OUT", 1);
             RecieveHandler();
         }
@@ -113,7 +114,7 @@ namespace InternetProject
         .Build());
 
 
-
+        //should change so that publish and recive are different so that 
         public void RecieveHandler()
         {
             client.UseApplicationMessageReceivedHandler(e =>
