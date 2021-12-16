@@ -168,6 +168,7 @@ namespace InternetProject
                 {
                     //lägg ändra brighnes arduino kod här
                     change = (i * 10) + "";
+                    tbxBrightness.Text = change + "%";
                 }
             }
             Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
@@ -186,6 +187,11 @@ namespace InternetProject
                 change = "light off";
             }
             Task Pub = PublishAsync("Grupp4OUT", change, true, 1);
+        }
+
+        private void tbxBrightness_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

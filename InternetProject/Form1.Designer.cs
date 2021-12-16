@@ -94,9 +94,11 @@
             this.tbxBrightness.Location = new System.Drawing.Point(107, 37);
             this.tbxBrightness.Margin = new System.Windows.Forms.Padding(4);
             this.tbxBrightness.Name = "tbxBrightness";
+            this.tbxBrightness.ReadOnly = true;
             this.tbxBrightness.Size = new System.Drawing.Size(132, 22);
             this.tbxBrightness.TabIndex = 4;
-            this.tbxBrightness.Text = "100%";
+            this.tbxBrightness.Text = "0%";
+            this.tbxBrightness.TextChanged += new System.EventHandler(this.tbxBrightness_TextChanged);
             // 
             // checkedListBox1
             // 
