@@ -29,6 +29,7 @@ namespace InternetProject
         string password = "DbnczQ9NC224";
         int port = 15591;
         string myString = "string";
+        string payload;
         public Form1()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace InternetProject
             client.UseConnectedHandler(e =>
             {
                 Console.WriteLine("Connected successfully with MQTT Brokers.");
+                MessageBox.Show("Connected successfully with MQTT Brokers");
             });
             client.UseDisconnectedHandler(e =>
             {
@@ -43,7 +45,7 @@ namespace InternetProject
             });
 
             Task sub = SubscribeAsync("Grupp4OUT", 1);
-
+            RecieveHandler();
         }
 
         public static async Task ConnectAsync(string uRL, string user, string password, int port, bool sSLPort)
@@ -122,15 +124,15 @@ namespace InternetProject
                     //string topic = "Grupp4OUT";
                     if (string.IsNullOrWhiteSpace(topic) == false)
                     {
-                        string payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-                        Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
-                        MethodInvoker inv = delegate
-                        {
-                            richtbx.Text = payload;
+                        payload = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
+                        //Console.WriteLine($"Topic: {topic}. Message Received: {payload}");
+                        //MethodInvoker inv = delegate
+                        //{
+                        //    richtbx.Text = payload;
 
-                        };
-                        Invoke(inv);
-                        MessageBox.Show($"Topic: {topic}. Message Received: {payload}");
+                        //};
+                        //Invoke(inv);
+                        //MessageBox.Show($"Topic: {topic}. Message Received: {payload}");
 
                     }
                 }
@@ -143,7 +145,12 @@ namespace InternetProject
 
         private void btnRecieveMessage_Click(object sender, EventArgs e)
         {
-            RecieveHandler();
+            MethodInvoker inv = delegate
+            {
+                richtbx.Text = payload;
+
+            };
+            Invoke(inv);
         }
 
         private void btnPublish_Click(object sender, EventArgs e)
