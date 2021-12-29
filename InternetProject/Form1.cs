@@ -272,7 +272,30 @@ namespace InternetProject
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string change = "";
+            string change2 = "";
+            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
+            {
+                if(checkedListBox1.GetItemText(checkedListBox1.CheckedItems[i]) == "Rave")
+                {
+                    change = "k";
+                }
+                else if(change == "")
+                {
+                    change = "j";
+                }
+                if (checkedListBox1.GetItemText(checkedListBox1.CheckedItems[i]) == "Rainbow")
+                {
+                    change2 = "l";
+                }
+                else if(change2 == "")
+                {
+                    change2 = "h";
+                }
+            }
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
+            
+            Task Pub2 = PublishAsync("Grupp4IN", change2, true, 1);
         }
 
         private void button1_Click(object sender, EventArgs e)
