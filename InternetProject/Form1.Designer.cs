@@ -46,8 +46,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpBri = new System.Windows.Forms.GroupBox();
             this.grpColor = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.timecbx = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.brightSlider)).BeginInit();
             this.grpBri.SuspendLayout();
+            this.grpColor.SuspendLayout();
             this.SuspendLayout();
             // 
             // checkboxONOFF
@@ -104,7 +109,6 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            "Timer",
             "Rave",
             "Rainbow"});
             this.checkedListBox1.Location = new System.Drawing.Point(32, 423);
@@ -112,6 +116,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(159, 106);
             this.checkedListBox1.TabIndex = 5;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // checkboxSensor
             // 
@@ -123,6 +128,7 @@
             this.checkboxSensor.TabIndex = 7;
             this.checkboxSensor.Text = "SensorMode";
             this.checkboxSensor.UseVisualStyleBackColor = true;
+            this.checkboxSensor.CheckedChanged += new System.EventHandler(this.checkboxSensor_CheckedChanged);
             // 
             // tbxSensorDistance
             // 
@@ -144,6 +150,7 @@
             this.rbtnAway.TabStop = true;
             this.rbtnAway.Text = "Away";
             this.rbtnAway.UseVisualStyleBackColor = true;
+            this.rbtnAway.CheckedChanged += new System.EventHandler(this.rbtnAway_CheckedChanged);
             // 
             // rbtnWithin
             // 
@@ -226,6 +233,7 @@
             // 
             // grpColor
             // 
+            this.grpColor.Controls.Add(this.comboBox1);
             this.grpColor.Location = new System.Drawing.Point(48, 128);
             this.grpColor.Name = "grpColor";
             this.grpColor.Size = new System.Drawing.Size(607, 155);
@@ -233,11 +241,69 @@
             this.grpColor.TabStop = false;
             this.grpColor.Text = "Color";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "RED",
+            "BLUE",
+            "GREEN",
+            "WHITE",
+            "PURPLE",
+            "YELLOW",
+            "ORANGE"});
+            this.comboBox1.Location = new System.Drawing.Point(11, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 372);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Timer";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(159, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Start time";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timecbx
+            // 
+            this.timecbx.FormattingEnabled = true;
+            this.timecbx.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.timecbx.Location = new System.Drawing.Point(32, 394);
+            this.timecbx.Name = "timecbx";
+            this.timecbx.Size = new System.Drawing.Size(121, 24);
+            this.timecbx.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.timecbx);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.brightSlider);
             this.Controls.Add(this.btnPublish);
@@ -261,6 +327,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.brightSlider)).EndInit();
             this.grpBri.ResumeLayout(false);
             this.grpBri.PerformLayout();
+            this.grpColor.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,6 +353,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpBri;
         private System.Windows.Forms.GroupBox grpColor;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox timecbx;
     }
 }
 

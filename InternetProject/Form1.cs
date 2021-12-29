@@ -30,6 +30,7 @@ namespace InternetProject
         int port = 15591;
         string myString = "string";
         string payload;
+        Timer timer;
         public Form1()
         {
             InitializeComponent();
@@ -156,6 +157,7 @@ namespace InternetProject
 
         private void btnPublish_Click(object sender, EventArgs e)
         {
+            //debug purpose
             Task Pub = PublishAsync("Grupp4OUT", tbxPublish.Text, true, 1);
             //RecieveHandler();
         }
@@ -194,5 +196,98 @@ namespace InternetProject
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string temp = comboBox1.SelectedItem.ToString();
+            string change = "";
+            switch (temp)
+            {
+                case "WHITE":
+                    change = "w";
+                    break;
+
+                case "RED":
+                    change = "r";
+                    break;
+
+                case "YELLOW":
+                    change = "y";
+                    break;
+
+                case "BLUE":
+                    change = "b";
+                    break;
+
+                case "GREEN":
+                    change = "g";
+                    break;
+
+                case "ORANGE":
+                    change = "a";
+                    break;
+
+                case "PURPLE":
+                    change = "p";
+                    break;
+
+                default:
+                    break;
+
+            }
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
+        }
+
+        private void checkboxSensor_CheckedChanged(object sender, EventArgs e)
+        {
+            string change = "";
+            if (checkboxSensor.Checked)
+            {
+                change = "s";
+            }
+            else
+            {
+                change = "x";
+            }
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
+
+            if (rbtnAway.Checked)
+            {
+                change = "u";
+            }
+            else if (rbtnWithin.Checked)
+            {
+                change = "i";
+            }
+            else
+            {
+                change = "i";
+            }
+            Task Pub2 = PublishAsync("Grupp4IN", change, true, 1);
+        }
+
+        private void rbtnAway_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer = new Timer();
+            timer.Interval = Int32.Parse(timecbx.SelectedItem.ToString()) * 60;
+            timer.Tick += new EventHandler(Turnoff);
+            timer.Start();
+        }
+        private void Turnoff(object f, EventArgs e)
+        {
+            string change = "f";
+            Task Pub = PublishAsync("Grupp4IN", change, true, 1);
+            timer.Stop();
+        }
+
     }
 }
